@@ -8,7 +8,9 @@ describe('CarsComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CarsComponent ]
+      declarations: [ CarsComponent ],
+      imports: [
+      ]
     })
     .compileComponents();
   }));

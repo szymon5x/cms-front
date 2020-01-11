@@ -15,8 +15,12 @@ export class DashboardComponent implements OnInit {
     this.navigationButtons = [
       { name: 'Home', url: '/admin' },
       { name: 'Strona', url: '/' },
+      { name: 'Główne ustawienia', url: 'general' },
+      { name: 'Dane', url: 'contact' },
       { name: 'Samochody', url: 'cars' },
-      { name: 'Dodaj samochód', url: 'new-car' }
+      { name: 'Dodaj samochód', url: 'new-car' },
+      { name: 'Newsy', url: 'news' },
+      { name: 'Dodaj newsa', url: 'new-news' }
     ];
   }
 
