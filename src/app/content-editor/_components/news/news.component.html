@@ -4,6 +4,6 @@
     Newsy
   </mat-card-title>
   <mat-card-content>
-
+    <app-items-list [items]="news" (deleteItem)="deleteNews($event)"></app-items-list>
   </mat-card-content>
 </mat-card>

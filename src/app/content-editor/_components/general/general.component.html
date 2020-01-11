@@ -4,6 +4,7 @@
     Ustawienia i treść
   </mat-card-title>
   <mat-card-content>
+    <p class="h3 text-center" *ngIf="loading">Ładowanie ...</p>
     <form [formGroup]="form" (submit)="submitForm()">
       <mat-form-field *ngFor="let field of fields" class="w-50">
         <mat-label>{{field.label}}</mat-label>

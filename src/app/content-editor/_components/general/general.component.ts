@@ -1,24 +1,36 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
+import { GeneralService } from '../../_services/general.service';
 
 @Component({
   selector: 'app-general',
   templateUrl: './general.component.html',
-  styleUrls: ['./general.component.scss']
+  styleUrls: ['./general.component.scss'],
+  providers: [ GeneralService ]
 })
 export class GeneralComponent implements OnInit {
 
   fields: { label: string; controlName: string; }[] = [];
   form: FormGroup;
+  loading = true;
 
-  constructor() { }
+  constructor(
+    private generalService: GeneralService
+  ) { }
 
   ngOnInit(): void {
     this.createForm();
+
+    this.generalService.getGeneralInfo().subscribe(generalInfo => {
+      this.form.setValue(generalInfo);
+      this.loading = false;
+    }, error => {
+      this.generalService.postGeneralInfo(this.form.value).subscribe();
+    });
   }
 
   submitForm(): void {
-
+    this.generalService.putGeneralInfo(this.form.value).subscribe();
   }
 
   private createForm() {
@@ -27,6 +39,7 @@ export class GeneralComponent implements OnInit {
       { label: 'Tytuł', controlName: 'title' },
     ];
     this.form = new FormGroup({
+      id: new FormControl(),
       firstContent: new FormControl(),
       secondContent: new FormControl(),
     });

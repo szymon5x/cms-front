@@ -13,10 +13,12 @@ import {
 import { RouterModule, Routes } from '@angular/router';
 import { MatButtonModule, MatCardModule, MatFormFieldModule, MatIconModule, MatInputModule, MatSidenavModule } from '@angular/material';
 import { ReactiveFormsModule } from '@angular/forms';
+import { SharedModule } from '../shared/shared.module';
 
 const routes: Routes = [
   {
     path: '', component: DashboardComponent, children: [
+      { path: 'new-car/:id', component: NewCarComponent },
       { path: 'new-car', component: NewCarComponent },
       { path: 'contact', component: ContactComponent },
       { path: 'new-news', component: NewNewsComponent },
@@ -41,7 +43,8 @@ const routes: Routes = [
     MatButtonModule,
     MatInputModule,
     MatIconModule,
-    MatSidenavModule
+    MatSidenavModule,
+    SharedModule
   ]
 })
 export class ContentEditorModule {

@@ -4,7 +4,8 @@
     Dane Samochodu
   </mat-card-title>
   <mat-card-content>
-    <form [formGroup]="form" (submit)="submitForm()">
+    <p class="h3 text-center" *ngIf="loading">Ładowanie ...</p>
+    <form [formGroup]="form" (submit)="submitForm(false)">
       <mat-form-field class="w-25">
         <mat-label>Marka</mat-label>
         <input matInput formControlName="name">
@@ -22,6 +23,7 @@
         <input type="file" formControlName="photo">
       </div>
     </form>
-    <button mat-button (click)="submitForm()">Zapisz</button>
+    <button mat-button (click)="submitForm(false)">Zapisz</button>
+    <button mat-button (click)="submitForm(true)">Zapisz i dodaj następny</button>
   </mat-card-content>
 </mat-card>

@@ -4,6 +4,6 @@
     Samochody
   </mat-card-title>
   <mat-card-content>
-
+    <app-items-list [items]="cars" (deleteItem)="deleteCar($event)"></app-items-list>
   </mat-card-content>
 </mat-card>

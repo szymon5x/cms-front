@@ -13,10 +13,9 @@ export class DashboardComponent implements OnInit {
 
   ngOnInit() {
     this.navigationButtons = [
-      { name: 'Home', url: '/admin' },
       { name: 'Strona', url: '/' },
       { name: 'Główne ustawienia', url: 'general' },
-      { name: 'Dane', url: 'contact' },
+      { name: 'Kontakt', url: 'contact' },
       { name: 'Samochody', url: 'cars' },
       { name: 'Dodaj samochód', url: 'new-car' },
       { name: 'Newsy', url: 'news' },

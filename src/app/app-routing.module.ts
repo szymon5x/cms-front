@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { ContentEditorGuard } from './_core/_guards/content-editor.guard';
 
 
 const routes: Routes = [
@@ -8,6 +9,7 @@ const routes: Routes = [
     loadChildren: () => import('./site/site.module').then(m => m.SiteModule)
   },
   {
+    // path: 'admin', canActivate: [ ContentEditorGuard ],
     path: 'admin',
     loadChildren: () => import('./content-editor/content-editor.module').then(m => m.ContentEditorModule)
   },

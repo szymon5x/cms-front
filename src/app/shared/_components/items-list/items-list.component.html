@@ -1,0 +1,11 @@
+<mat-list role="list">
+  <mat-list-item *ngFor="let item of items" role="listitem">
+    <span class="text-truncate" [matTooltip]="item.description">{{ item.description }}</span>
+    <a mat-button [routerLink]="item.endpoint" class="mr-1">
+      <mat-icon>edit</mat-icon>
+    </a>
+    <a mat-button class="mr-1" (click)="delete(item)">
+      <mat-icon>delete</mat-icon>
+    </a>
+  </mat-list-item>
+</mat-list>
