@@ -23,7 +23,7 @@ export class CarsService {
     return this.http.post<Car>(endpoints.create(endpoints.cars), car);
   }
 
-  putCar(id: number, car: Car): Observable<Car> {
+  putCar(id: number, car): Observable<Car> {
     return this.http.put<Car>(`${endpoints.create(endpoints.cars)}/${id}/`, car);
   }
 

@@ -42,14 +42,25 @@ export class NewCarComponent implements OnInit {
   }
 
   submitForm(createNew: boolean): void {
+    const formValues = this.form.value;
+    const formData = new FormData();
+    Object.keys(formValues).forEach(key => {
+      formData.append(key, formValues[key]);
+    });
     if (this.id) {
-      this.carsService.putCar(+this.id, this.form.value).subscribe(() => {
+      this.carsService.putCar(+this.id, formData).subscribe(() => {
         createNew ? this.form.reset() : this.router.navigate([ '/admin', 'cars' ]);
       });
     } else {
-      this.carsService.postCar(this.form.value).subscribe(() => {
+      this.carsService.postCar(formData).subscribe(() => {
         createNew ? this.form.reset() : this.router.navigate([ '/admin', 'cars' ]);
       });
+    }
+  }
+
+  setPhotoValue(event) {
+    if (event.target.files.length > 0) {
+      this.form.get('photo').setValue(event.target.files[0]);
     }
   }
 }

@@ -20,7 +20,7 @@
       </mat-form-field>
       <div class="w-25">
         Zdjęcie
-        <input type="file" formControlName="photo">
+        <input type="file" (change)="setPhotoValue($event)">
       </div>
     </form>
     <button mat-button (click)="submitForm(false)">Zapisz</button>
