@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { SiteSettingsService } from '../../../shared/_services/site-settings.service';
+import { MainSite } from '../../_models';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  mainSite: MainSite;
+  constructor(
+    private siteSettingsService: SiteSettingsService
+  ) { }
 
   ngOnInit() {
+    this.mainSite = this.siteSettingsService.mainSite;
   }
 
 }

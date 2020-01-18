@@ -1,1 +1,8 @@
-<p>news works!</p>
+<h1 class="elegantshadow">Aktualności</h1>
+
+<div class="container">
+  <div *ngFor="let news of newsTable" class="news mb-5">
+    <h5> {{ news.title }}</h5>
+    <div class="">{{ news.content }}</div>
+  </div>
+</div>

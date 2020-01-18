@@ -5,10 +5,11 @@ import { SharedModule } from '../shared/shared.module';
 import { CarsComponent, ContactComponent, HomeComponent, NavbarComponent, NewsComponent, SiteComponent } from './_components';
 import { SiteRoutingModule } from './site-routing.module';
 import { MatButtonModule, MatIconModule, MatToolbarModule } from '@angular/material';
+import { FooterComponent } from './_components/footer/footer.component';
 
 
 @NgModule({
-  declarations: [ HomeComponent, ContactComponent, SiteComponent, CarsComponent, NewsComponent, NavbarComponent ],
+  declarations: [ HomeComponent, ContactComponent, SiteComponent, CarsComponent, NewsComponent, NavbarComponent, FooterComponent ],
   imports: [
     CommonModule,
     SharedModule,

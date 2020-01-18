@@ -6,3 +6,18 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 form mat-form-field {
   padding: 0 15px;
 }
+
+h1 {
+  font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+  font-size: 52px;
+  padding: 80px 50px;
+  text-align: center;
+  text-transform: uppercase;
+  text-rendering: optimizeLegibility;
+
+  &.elegantshadow {
+    color: #131313;
+    background-color: #e7e5e4;
+    letter-spacing: .15em;
+  }
+}

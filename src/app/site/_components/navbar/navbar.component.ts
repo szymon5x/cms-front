@@ -16,10 +16,10 @@ export class NavbarComponent implements OnInit {
 
   ngOnInit() {
     this.links = [
-      { route: 'home', name: 'Home', icon: 'home' },
-      { route: 'cars', name: 'Flota', icon: 'directions_car' },
-      { route: 'news', name: 'Aktualności', icon: 'chat_bubble' },
-      { route: 'contact', name: 'Kontakt', icon: 'phone' }
+      { route: '/home', name: 'Home', icon: 'home' },
+      { route: '/cars', name: 'Flota', icon: 'directions_car' },
+      { route: '/news', name: 'Aktualności', icon: 'chat_bubble' },
+      { route: '/contact', name: 'Kontakt', icon: 'phone' }
     ];
   }
 

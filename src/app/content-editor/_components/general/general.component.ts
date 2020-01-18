@@ -37,6 +37,11 @@ export class GeneralComponent implements OnInit {
     this.fields = [
       { label: 'Nazwa', controlName: 'name' },
       { label: 'Tytuł', controlName: 'title' },
+      { label: 'Opis stopki', controlName: 'footerDescription' },
+      { label: 'Facebook link', controlName: 'facebookLink' },
+      { label: 'Instagram link', controlName: 'instagramLink' },
+      { label: 'Snapchat link', controlName: 'snapchatLink' },
+      { label: 'Twitter link', controlName: 'twitterLink' }
     ];
     this.form = new FormGroup({
       id: new FormControl(),

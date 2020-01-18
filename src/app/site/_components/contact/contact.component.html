@@ -1,1 +1,32 @@
-<p>contact works!</p>
+<h1 class="elegantshadow">Kontakt</h1>
+
+<div class="container">
+  <h2>Kontakt</h2>
+  <ul>
+    <li class="d-flex align-items-center">
+      <mat-icon class="mr-1">phone</mat-icon>
+      <div class="mr-2">Telefon kontaktowy</div>
+      <div class="font-weight-bold">{{siteSettingsService.contanct.phone}}</div>
+    </li>
+    <li class="d-flex align-items-center">
+      <mat-icon class="mr-1">email</mat-icon>
+      <div class="mr-2">Email kontaktowy</div>
+      <div class="font-weight-bold">{{siteSettingsService.contanct.mail}}</div>
+    </li>
+    <li class="d-flex align-items-center">
+      <mat-icon class="mr-1">house</mat-icon>
+      <div class="mr-2">Adres siedźiby</div>
+      <div class="font-weight-bold">{{ siteSettingsService.contanct.address }}</div>
+    </li>
+    <li class="d-flex align-items-center">
+      <mat-icon class="mr-1">location_city</mat-icon>
+      <div class="mr-2">Dostępne oddziały</div>
+      <div class="font-weight-bold">{{ siteSettingsService.contanct.citiesAv }}</div>
+    </li>
+    <li class="d-flex align-items-center">
+      <mat-icon class="mr-1">access_time</mat-icon>
+      <div class="mr-2">Godziny pracy</div>
+      <div class="font-weight-bold">{{ siteSettingsService.contanct.openHr }}</div>
+    </li>
+  </ul>
+</div>

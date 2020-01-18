@@ -6,6 +6,7 @@ const routes: Routes = [
   {
     path: '',
     component: SiteComponent,
+    // redirectTo: 'home',
     children: [
       { path: 'home', component: HomeComponent },
       { path: 'cars', component: CarsComponent },

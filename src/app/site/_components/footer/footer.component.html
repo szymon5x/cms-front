@@ -1,0 +1,46 @@
+<footer class="site-footer">
+  <div class="footer-widgets">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="foot-about">
+            <p>{{ siteSettingsService.footer.footerDescription }}</p>
+
+            <ul class="d-flex flex-wrap align-items-center">
+              <li><a target="_blank" href="{{siteSettingsService.footer.facebookLink}}"><mat-icon class="mr-2">group</mat-icon>Facebook</a></li>
+              <li><a target="_blank" href="{{siteSettingsService.footer.instagramLink}}"><mat-icon class="mr-2">group</mat-icon>Instagram</a></li>
+              <li><a target="_blank" href="{{siteSettingsService.footer.snapchatLink}}"><mat-icon class="mr-2">group</mat-icon>Snapchat</a></li>
+              <li><a target="_blank" href="{{siteSettingsService.footer.twitterLink}}"><mat-icon class="mr-2">group</mat-icon>Twitter</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-2 mt-5 mt-md-0">
+          <h2>Nawigacja</h2>
+          <ul>
+            <li><a routerLink="/home"><mat-icon class="mr-2">home</mat-icon>Home</a></li>
+            <li><a routerLink="/cars"><mat-icon class="mr-2">directions_car</mat-icon>Flota</a></li>
+            <li><a routerLink="/news"><mat-icon class="mr-2">chat_bubble</mat-icon>Newsy</a></li>
+            <li><a routerLink="/contact"><mat-icon class="mr-2">phone</mat-icon>Kontakt</a></li>
+          </ul>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4 mt-5 mt-md-0">
+          <h2>Oddziały</h2>
+          <p>{{ siteSettingsService.contanct.citiesAv }}</p>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-3 mt-5 mt-md-0">
+          <div class="foot-contact">
+            <h2>Kontakt</h2>
+            <ul>
+              <li class="d-flex align-items-center"><mat-icon class="mr-2">phone</mat-icon><div>{{siteSettingsService.contanct.phone}}</div></li>
+              <li class="d-flex align-items-center"><mat-icon class="mr-2">email</mat-icon><div>{{siteSettingsService.contanct.mail}}</div></li>
+              <li class="d-flex align-items-center"><mat-icon class="mr-2">house</mat-icon><div>{{ siteSettingsService.contanct.address }}</div></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>

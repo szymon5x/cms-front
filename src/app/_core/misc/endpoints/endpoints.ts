@@ -1,7 +1,4 @@
 export const endpoints = {
-  /**
-   * Auth API endpoints
-   */
   loginApi: '/users/auth/login/',
   logoutApi: '/users/auth/logout/',
   sessionInfoApi: '/users/auth/session/',

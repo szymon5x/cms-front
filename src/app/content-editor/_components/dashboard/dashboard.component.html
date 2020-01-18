@@ -3,6 +3,8 @@
     <div *ngFor="let button of navigationButtons">
       <button mat-button [routerLink]="button.url" class="w-100 text-left">{{ button.name }}</button>
     </div>
+    <hr>
+    <button mat-button class="w-100 text-left" (click)="logOut()">Wyloguj</button>
   </mat-sidenav>
   <mat-sidenav-content>
     <div class="container">

@@ -54,7 +54,8 @@ export class NewNewsComponent implements OnInit {
       { label: 'Tytuł', controlName: 'title' },
     ];
     this.form = new FormGroup({
-      content: new FormControl()
+      content: new FormControl(),
+      id: new FormControl()
     });
     this.fields.forEach(field => {
       this.form.addControl(field.controlName, new FormControl());

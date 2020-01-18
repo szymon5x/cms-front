@@ -21,6 +21,7 @@ const routes: Routes = [
       { path: 'new-car/:id', component: NewCarComponent },
       { path: 'new-car', component: NewCarComponent },
       { path: 'contact', component: ContactComponent },
+      { path: 'new-news/:id', component: NewNewsComponent },
       { path: 'new-news', component: NewNewsComponent },
       { path: 'news', component: NewsComponent },
       { path: 'cars', component: CarsComponent },
@@ -33,7 +34,16 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  declarations: [ DashboardComponent, LoginComponent, NewCarComponent, ContactComponent, NewsComponent, CarsComponent, NewNewsComponent, GeneralComponent ],
+  declarations: [
+    DashboardComponent,
+    LoginComponent,
+    NewCarComponent,
+    ContactComponent,
+    NewsComponent,
+    CarsComponent,
+    NewNewsComponent,
+    GeneralComponent
+  ],
   imports: [
     CommonModule,
     RouterModule.forChild(routes),
