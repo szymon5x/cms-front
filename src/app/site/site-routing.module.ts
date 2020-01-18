@@ -1,12 +1,14 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { CarsComponent, ContactComponent, HomeComponent, NewsComponent, SiteComponent } from './_components';
+import { CarsComponent, ContactComponent, HomeComponent, LoginComponent, NewsComponent, SiteComponent } from './_components';
 
 const routes: Routes = [
   {
+    path: 'login', component: LoginComponent
+  },
+  {
     path: '',
     component: SiteComponent,
-    // redirectTo: 'home',
     children: [
       { path: 'home', component: HomeComponent },
       { path: 'cars', component: CarsComponent },

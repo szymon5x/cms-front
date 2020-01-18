@@ -19,12 +19,12 @@ export class ContentEditorGuard implements CanActivate {
         if (response.time_left > 0) {
           return true;
         } else {
-          this.router.navigate([ '/admin', 'login' ]);
+          this.router.navigate([ '/login' ]);
           return false;
         }
       }),
       catchError((error: any) => {
-        this.router.navigate([ '/admin', 'login' ]);
+        this.router.navigate([ '/login' ]);
         return of(false);
       }));
   }

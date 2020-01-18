@@ -5,7 +5,6 @@ import {
   ContactComponent,
   DashboardComponent,
   GeneralComponent,
-  LoginComponent,
   NewCarComponent,
   NewNewsComponent,
   NewsComponent
@@ -27,16 +26,12 @@ const routes: Routes = [
       { path: 'cars', component: CarsComponent },
       { path: 'general', component: GeneralComponent },
     ]
-  },
-  {
-    path: 'login', component: LoginComponent
   }
 ];
 
 @NgModule({
   declarations: [
     DashboardComponent,
-    LoginComponent,
     NewCarComponent,
     ContactComponent,
     NewsComponent,

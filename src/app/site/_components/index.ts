@@ -4,3 +4,4 @@ export * from './site//site.component';
 export * from './cars/cars.component';
 export * from './news/news.component';
 export * from './navbar/navbar.component';
+export * from './login/login.component';
