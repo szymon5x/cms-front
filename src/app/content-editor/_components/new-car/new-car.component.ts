@@ -48,6 +48,9 @@ export class NewCarComponent implements OnInit {
       formData.append(key, formValues[key]);
     });
     if (this.id) {
+      if (typeof formData.get('photo') === 'string') {
+        formData.delete('photo');
+      }
       this.carsService.putCar(+this.id, formData).subscribe(() => {
         createNew ? this.form.reset() : this.router.navigate([ '/admin', 'cars' ]);
       });

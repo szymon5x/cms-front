@@ -28,7 +28,7 @@ export class CarsComponent implements OnInit {
       this.cars = cars.map(car => {
         return {
           id: car.id,
-          description: 'Samochód: ' + car.name + ' ' + car.model + ' Cena: ' + car.price + ' zł',
+          description: 'Samochód: ' + car.name + ' ' + car.model + ' Cena: ' + car.price,
           endpoint: ['/admin', 'new-car', car.id]
         };
       });
